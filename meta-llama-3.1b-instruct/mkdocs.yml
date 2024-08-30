@@ -1,0 +1,8 @@
+site_name: 'Documentation'
+
+nav:
+  - Usage: usage.md
+  - Model: model.md
+
+plugins:
+  - techdocs-core
