@@ -40,8 +40,8 @@ metadata:
       title: API URL
       type: website
       icon: WebAsset
-    - url: https://ollama.com
-      title: Ollama Documentation
+    - url: https://huggingface.co/ibm-granite/granite-8b-code-instruct
+      title: Huggingface
       type: website
       icon: WebAsset
     - url: https://www.apache.org/licenses/LICENSE-2.0
@@ -86,8 +86,8 @@ metadata:
       title: API URL
       type: website
       icon: WebAsset
-    - url: https://ollama.com
-      title: Ollama Documentation
+    - url: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct
+      title: Huggingface
       type: website
       icon: WebAsset
     - url: https://www.apache.org/licenses/LICENSE-2.0
