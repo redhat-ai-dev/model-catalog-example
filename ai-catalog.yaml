@@ -1,36 +1,52 @@
 # From: https://raw.githubusercontent.com/benwilcock/backstage-catalogs/main/ai-asset-catalog.yml
-###############################
-# SYSTEMS
-###############################
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: multi-model-service
-  description: "Ollama-based model service providing models for developer tools"
-  tags:
-    - genai
-    - ollama
-    - developer-tools
-  links:
-    - url: https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
-      title: Multi Model Service
-      type: website 
-      icon: WebAsset
-spec: 
-  owner: user:johnmcollier
-  profile:
-    displayName: Multi Model Service
----
 ####################################
 # COMPONENTS
 ####################################
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
+  name: multi-model-service
+  annotations:
+    backstage.io/techdocs-ref: dir:multi-model-service
+  description: 'Ollama-based model service providing models for developer tools.'
+  links:
+    - url: https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
+      title: Access
+      type: website
+      icon: WebAssett
+    - url: https://ollama.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
+      title: API URL
+      type: website
+      icon: WebAsset
+  tags:
+    - genai
+    - ibm-granite
+    - ollama
+    - llm
+    - multi-model-service
+spec:
+  type: model-server
+  owner: user:johnmcollier
+  lifecycle: production
+  providesApis:
+    - model-service-api
+  dependsOn:
+    - resource:ibm-granite-8b-code-instruct
+    - resource:meta-llama-31-8b-instruct
+    - api:model-service-api
+  profile:
+    displayName: "Multi Model Service"
+---
+####################################
+# RESOURCES
+####################################
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
   name: ibm-granite-8b-code-instruct
   annotations:
     backstage.io/techdocs-ref: dir:ibm-granite-8b-code-instruct
-  description: 'AI Model server popular for hosting large language models in enterprise settings. OpenAI API compatible. '
+  description: 'IBM Granite is a decoder-only code model for code generative tasks (e.g. fixing bugs, explaining code, documenting code. Trained with code written in 116 programming languages.'
   links:
     - url: https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
       title: Access
@@ -50,33 +66,26 @@ metadata:
       icon: WebAsset
   tags:
     - genai
-    - ibm-granite
-    - ollama
+    - ibm
     - llm
-    - multi-model-service
 spec:
   type: model
   owner: user:johnmcollier
-  system: multi-model-service
   lifecycle: production
   providesApis:
     - model-service-api
-  dependsOn:
-    - resource:ibm-granite-8b-code-instruct
-    - api:model-service-api
+  dependencyOf: 
+    - component:multi-model-service
   profile:
-    displayName: "IBM Granite 8b Code Model Service"
+    displayName: "IBM Granite Code Model"
 ---
-####################################
-# COMPONENTS
-####################################
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Resource
 metadata:
   name: meta-llama-31-8b-instruct
   annotations:
-    backstage.io/techdocs-ref: dir:meta-llama-3.1-8b-instruct
-  description: 'The Meta llama-3.1 8b model deployed on Ollama. The Meta Llama 3.1 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction tuned generative models.'
+    backstage.io/techdocs-ref: dir:meta-llama-31-8b-instruct
+  description: 'Llama 3.1 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety'
   links:
     - url: https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
       title: Access
@@ -97,38 +106,6 @@ metadata:
   tags:
     - genai
     - meta
-    - meta-llama
-    - llm
-    - multi-model-service
-spec:
-  type: model
-  owner: user:johnmcollier
-  system: multi-model-service
-  lifecycle: production
-  providesApis:
-    - model-service-api
-  dependsOn:
-    - resource:meta-llama-31-8b-instruct
-    - api:model-service-api
-  profile:
-    displayName: "Meta Llama-3.1 8b Model Service"
----
-####################################
-# RESOURCES
-####################################
-apiVersion: backstage.io/v1alpha1
-kind: Resource
-metadata:
-  name: ibm-granite-8b-code-instruct
-  description: 'IBM Granite is a decoder-only code model for code generative tasks (e.g. fixing bugs, explaining code, documenting code. Trained with code written in 116 programming languages.'
-  links:
-    - url: https://github.com/ibm-granite/granite-code-models
-      title: IBM Granite Code Repository
-      type: website
-      icon: WebAsset
-  tags:
-    - genai
-    - ibm
     - llm
 spec:
   type: model
@@ -137,32 +114,7 @@ spec:
   providesApis:
     - model-service-api
   dependencyOf: 
-    - component:ibm-granite-8b-code-instruct
-  profile:
-    displayName: "IBM Granite Code Model"
----
-apiVersion: backstage.io/v1alpha1
-kind: Resource
-metadata:
-  name: meta-llama-31-8b-instruct
-  description: 'Llama 3.1 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety'
-  links:
-    - url: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct
-      title: Meta Llama-3.1 8b
-      type: website
-      icon: WebAsset
-  tags:
-    - genai
-    - meta
-    - llm
-spec:
-  type: model
-  owner: user:johnmcollier
-  lifecycle: production
-  providesApis:
-    - model-service-api
-  dependencyOf: 
-    - component:meta-llama-31-8b-instruct
+    - component:multi-model-service
   profile:
     displayName: "Meta Llama-3.1 8b Model"
 ######################################
@@ -187,7 +139,6 @@ metadata:
 spec:
   type: api
   owner: user:johnmcollier
-  system: multi-model-service
   lifecycle: production
   dependencyOf: 
     - component:ibm-granite-8b-code-instruct

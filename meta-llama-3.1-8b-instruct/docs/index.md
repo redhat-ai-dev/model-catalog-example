@@ -1,11 +1,13 @@
-# Developer Model Server
+# meta-llama-3.1b-instruct
 
-This Ollama model server is serving the [meta-llama-3.1b-instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct) model on it.
+## Model Summary:
 
-## Access
+The Meta Llama 3.1 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction tuned generative models in 8B, 70B and 405B sizes (text in/text out). The Llama 3.1 instruction tuned text only models (8B, 70B, 405B) are optimized for multilingual dialogue use cases and outperform many of the available open source and closed chat models on common industry benchmarks.
 
-The model server is available at https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/. Sign in with your SSO credentials to access the server and to generate a token.
+## Model developer
 
-## Usage
+Meta
 
-Do NOT use this to generate open source or product code.
+## Model Architecture
+
+Llama 3.1 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety. 

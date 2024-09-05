@@ -1,8 +1,7 @@
 site_name: 'Documentation'
 
 nav:
-  - Usage: index.md
-  - Model: model.md
+  - Model: index.md
 
 plugins:
   - techdocs-core
