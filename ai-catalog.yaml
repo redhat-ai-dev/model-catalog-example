@@ -69,7 +69,7 @@ metadata:
     - ibm
     - llm
 spec:
-  type: model
+  type: llm
   owner: user:johnmcollier
   lifecycle: production
   providesApis:
@@ -108,7 +108,7 @@ metadata:
     - meta
     - llm
 spec:
-  type: model
+  type: llm
   owner: user:johnmcollier
   lifecycle: production
   providesApis:
