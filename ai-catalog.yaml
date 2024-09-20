@@ -26,7 +26,7 @@ metadata:
     - multi-model-service
 spec:
   type: model-server
-  owner: user:johnmcollier
+  owner: user:jdubrick
   lifecycle: production
   providesApis:
     - model-service-api
@@ -70,7 +70,7 @@ metadata:
     - llm
 spec:
   type: llm
-  owner: user:johnmcollier
+  owner: user:jdubrick
   lifecycle: production
   providesApis:
     - model-service-api
@@ -109,7 +109,7 @@ metadata:
     - llm
 spec:
   type: llm
-  owner: user:johnmcollier
+  owner: user:jdubrick
   lifecycle: production
   providesApis:
     - model-service-api
