@@ -1,7 +1,7 @@
 site_name: 'Documentation'
 
 nav:
-  - TOC: index.md
+  - Table Of Contents: index.md
   - Model: model.md
   - Usage: usage-examples.md
   - Training: training.md
