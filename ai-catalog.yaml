@@ -138,9 +138,9 @@ metadata:
       icon: WebAsset
 spec:
   type: api
-  owner: user:johnmcollier
+  owner: user:jdubrick
   lifecycle: production
   dependencyOf: 
     - component:ibm-granite-8b-code-instruct
   definition:
-    $text: https://github.com/johnmcollier/rhdh-ai-catalog/blob/main/openapi.json
+    $text: https://github.com/Jdubrick/model-catalog/blob/main/openapi.json
