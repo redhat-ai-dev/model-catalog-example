@@ -1,6 +1,6 @@
 # Usage Examples
 
-```
+```python
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 device = "cuda" # or "cpu"

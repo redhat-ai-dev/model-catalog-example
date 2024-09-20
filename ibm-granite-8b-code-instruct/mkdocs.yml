@@ -3,10 +3,10 @@ site_name: 'Documentation'
 nav:
   - Table Of Contents: index.md
   - Model: model.md
-  - Usage: usage-examples.md
+  - Usage: code/usage-examples.md
   - Training: training.md
   - Ethics: ethics.md
-  - License: LICENSE
+  - License: license.md
 
 plugins:
   - techdocs-core
