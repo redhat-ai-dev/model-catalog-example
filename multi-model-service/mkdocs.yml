@@ -1,4 +1,4 @@
-site_name: 'Documentation'
+site_name: 'ModelServiceDocumentation'
 
 nav:
   - Usage: index.md
