@@ -1,5 +1,7 @@
 # Usage Examples
 
+This is a simple example of how to use Granite-8B-Code-Instruct-4K model.
+
 ```python
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer

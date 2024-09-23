@@ -37,7 +37,7 @@ print(outputs[0]["generated_text"][-1])
 
 ### Tool Use With Transformers
 
-LLaMA-3.1 supports multiple tool use formats. You can see a full guide to prompt formatting here.
+LLaMA-3.1 supports multiple tool use formats. You can see a full guide to prompt formatting [here](https://llama.meta.com/docs/model-cards-and-prompt-formats/llama3_1/).
 
 Tool use is also supported through [chat templates](https://huggingface.co/docs/transformers/main/chat_templating#advanced-tool-use--function-calling) in Transformers. Here is a quick example showing a single simple tool:
 
