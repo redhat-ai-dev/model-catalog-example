@@ -2,9 +2,9 @@ site_name: 'GraniteDocumentation'
 
 nav:
   - Table Of Contents: index.md
-  - Model: model.md
-  - Usage: code/usage-examples.md
-  - Training: training.md
+  - Model Information: model.md
+  - Model Usage: code/usage-examples.md
+  - Training Information: training.md
   - Ethics: ethics.md
   - License: license.md
 
