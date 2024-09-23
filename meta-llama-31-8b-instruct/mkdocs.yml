@@ -1,4 +1,4 @@
-site_name: 'LlamaDocumentation'
+site_name: 'Documentation'
 
 nav:
   - Table Of Contents: index.md

@@ -1,4 +1,4 @@
-site_name: 'GraniteDocumentation'
+site_name: 'Documentation'
 
 nav:
   - Table Of Contents: index.md
