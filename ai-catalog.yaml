@@ -26,7 +26,7 @@ metadata:
     - multi-model-service
 spec:
   type: model-server
-  owner: user:jdubrick
+  owner: user:johnmcollier
   lifecycle: production
   providesApis:
     - model-service-api
@@ -70,7 +70,7 @@ metadata:
     - llm
 spec:
   type: llm
-  owner: user:jdubrick
+  owner: user:johnmcollier
   lifecycle: production
   providesApis:
     - model-service-api
@@ -109,7 +109,7 @@ metadata:
     - llm
 spec:
   type: llm
-  owner: user:jdubrick
+  owner: user:johnmcollier
   lifecycle: production
   providesApis:
     - model-service-api
@@ -138,9 +138,9 @@ metadata:
       icon: WebAsset
 spec:
   type: api
-  owner: user:jdubrick
+  owner: user:johnmcollier
   lifecycle: production
   dependencyOf: 
     - component:ibm-granite-8b-code-instruct
   definition:
-    $text: https://github.com/Jdubrick/model-catalog/blob/main/openapi.json
+    $text: https://github.com/redhat-ai-dev/model-catalog/blob/main/openapi.json
