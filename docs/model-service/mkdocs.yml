@@ -1,7 +1,0 @@
-site_name: 'Documentation'
-
-nav:
-  - Usage: index.md
-
-plugins:
-  - techdocs-core
