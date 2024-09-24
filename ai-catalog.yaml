@@ -8,7 +8,7 @@ kind: Component
 metadata:
   name: multi-model-service
   annotations:
-    backstage.io/techdocs-ref: dir:multi-model-service
+    backstage.io/techdocs-ref: dir:docs
   description: 'Ollama-based model service providing models for developer tools.'
   links:
     - url: https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
@@ -47,7 +47,7 @@ kind: Resource
 metadata:
   name: ibm-granite-8b-code-instruct
   annotations:
-    backstage.io/techdocs-ref: dir:ibm-granite-8b-code-instruct
+    backstage.io/techdocs-ref: dir:docs/ibm-granite
   description: 'IBM Granite is a decoder-only code model for code generative tasks (e.g. fixing bugs, explaining code, documenting code. Trained with code written in 116 programming languages.'
   links:
     - url: https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
@@ -93,7 +93,7 @@ kind: Resource
 metadata:
   name: meta-llama-31-8b-instruct
   annotations:
-    backstage.io/techdocs-ref: dir:meta-llama-31-8b-instruct
+    backstage.io/techdocs-ref: dir:docs/meta-llama
   description: 'Llama 3.1 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety'
   links:
     - url: https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/

@@ -1,0 +1,7 @@
+site_name: 'Documentation'
+
+nav:
+  - Model New: index.md
+
+plugins:
+  - techdocs-core
