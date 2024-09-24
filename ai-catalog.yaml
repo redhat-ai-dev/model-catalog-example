@@ -1,6 +1,7 @@
-# From: https://raw.githubusercontent.com/benwilcock/backstage-catalogs/main/ai-asset-catalog.yml
+# Adapted from: https://raw.githubusercontent.com/benwilcock/backstage-catalogs/main/ai-asset-catalog.yml
 ####################################
 # COMPONENTS
+# A Component represents a model server that's deployed, containing metadata about it
 ####################################
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -39,6 +40,7 @@ spec:
 ---
 ####################################
 # RESOURCES
+# A resource (with type `ai-model`) represents an AI model that's deployed on an associated model server
 ####################################
 apiVersion: backstage.io/v1alpha1
 kind: Resource
@@ -108,7 +110,7 @@ metadata:
     - meta
     - llm
 spec:
-  type: llm
+  type: ai-model
   owner: user:johnmcollier
   lifecycle: production
   providesApis:
@@ -119,6 +121,7 @@ spec:
     displayName: "Meta Llama-3.1 8b Model"
 ######################################
 # APIs
+# The API object represent the API used by the model server (e.g. OpenAI)
 ######################################
 ---
 apiVersion: backstage.io/v1alpha1
@@ -126,7 +129,7 @@ kind: API
 metadata:
   name: model-service-api
   title: Model Service API
-  description: 'The REST API exposed by the Ollama-based multi model service.'
+  description: 'The OpenAI-compatible REST API exposed by the Ollama-based multi model service.'
   tags:
     - api
     - openai
@@ -137,7 +140,7 @@ metadata:
       type: website
       icon: WebAsset
 spec:
-  type: api
+  type: openapi
   owner: user:johnmcollier
   lifecycle: production
   dependencyOf: 
