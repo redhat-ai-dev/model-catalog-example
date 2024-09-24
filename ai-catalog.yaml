@@ -143,4 +143,4 @@ spec:
   dependencyOf: 
     - component:ibm-granite-8b-code-instruct
   definition:
-    $text: https://github.com/johnmcollier/rhdh-ai-catalog/blob/main/openapi.json
+    $text: https://github.com/redhat-ai-dev/model-catalog/blob/main/openapi.json
