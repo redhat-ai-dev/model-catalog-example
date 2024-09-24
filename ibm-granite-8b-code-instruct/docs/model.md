@@ -2,7 +2,7 @@
 
 ## Model Description
 
-Granite-8B-Code-Instruct-4K is a 8B parameter model fine tuned from Granite-8B-Code-Base-4K on a combination of **permissively licensed** instruction data to enhance instruction following capabilities including logical reasoning and problem-solving skills.
+Granite-8B-Code-Instruct-4K is a 8B parameter model fine-tuned from Granite-8B-Code-Base-4K on a combination of **permissively licensed** instruction data to enhance instruction following capabilities including logical reasoning and problem-solving skills.
 
 ### Developed By
 IBM Research
