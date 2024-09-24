@@ -36,7 +36,7 @@ The following metadata is stored for each model in the catalog:
 | Name         | Type     | Description | Catalog Implementation |
 | ------------ | -------- | ------------| ---------------------- |
 | Name         | String     | The name of the model | Resource `metadata.name` |
-| Tasks        | String[]   | The intended tasks for the model | Resource `metadata.tags[]`. Prefix task specific tags with task, e.g. task: Text Generation |
+| Tasks        | String[]   | The intended tasks for the model | Resource `metadata.tags[]`. Can prefix task specific tags to highlight e.g. `task-text-generation`, or `task#text-generation` |
 | Usage        | String     | Brief description on the usage for the model | `metadata.description` |
 | Type         | String     | The type of model being stored in the catalog. | Resource techdoc or tags |
 | License      | URL        | The license that the model uses. | Resource `metadata.links[]` or techdoc |
