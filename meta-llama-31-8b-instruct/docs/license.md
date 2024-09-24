@@ -1,3 +1,6 @@
+ <!--
+Sourced from: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct#model-information
+-->
  LLAMA 3.1 COMMUNITY LICENSE AGREEMENT
 
  Llama 3.1 Version Release Date: July 23, 2024

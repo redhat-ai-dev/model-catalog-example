@@ -1,9 +1,13 @@
 # Usage Examples
-
+<!--
+Sourced from: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct#how-to-use
+-->
 This repository contains two versions of Meta-Llama-3.1-8B-Instruct, for use with transformers and with the original llama codebase.
 
-## Use with transformers
-
+## Use With Transformers
+<!--
+Sourced from: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct#use-with-transformers
+-->
 Starting with transformers >= 4.43.0 onward, you can run conversational inference using the Transformers pipeline abstraction or by leveraging the Auto classes with the `generate()` function.
 
 Make sure to update your transformers installation via `pip install --upgrade transformers`.
@@ -36,7 +40,9 @@ print(outputs[0]["generated_text"][-1])
 **Note:** You can also find detailed recipes on how to use the model locally, with torch.compile(), assisted generations, quantised and more at [huggingface-llama-recipes](https://github.com/huggingface/huggingface-llama-recipes)
 
 ### Tool Use With Transformers
-
+<!--
+Sourced from: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct#tool-use-with-transformers
+-->
 LLaMA-3.1 supports multiple tool use formats. You can see a full guide to prompt formatting [here](https://llama.meta.com/docs/model-cards-and-prompt-formats/llama3_1/).
 
 Tool use is also supported through [chat templates](https://huggingface.co/docs/transformers/main/chat_templating#advanced-tool-use--function-calling) in Transformers. Here is a quick example showing a single simple tool:
@@ -79,7 +85,9 @@ messages.append({"role": "tool", "name": "get_current_temperature", "content": "
 After that, you can `generate()` again to let the model use the tool result in the chat. Note that this was a very brief introduction to tool calling - for more information, see the [LLaMA prompt format docs](https://llama.meta.com/docs/model-cards-and-prompt-formats/llama3_1/) and the Transformers [tool use documentation](https://huggingface.co/docs/transformers/main/chat_templating#advanced-tool-use--function-calling).
 
 ## Use With Llama
-
+<!--
+Sourced from: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct#use-with-llama
+-->
 Please follow the instructions in this [repository](https://github.com/meta-llama/llama)
 
 To download Original checkpoints, see the example command below leveraging `huggingface-cli`:

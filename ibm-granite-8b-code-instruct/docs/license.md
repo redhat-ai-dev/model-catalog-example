@@ -1,4 +1,6 @@
-
+<!--
+Sourced from: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k#model-summary
+-->
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/

@@ -1,3 +1,5 @@
 # Ethical Considerations
-
+<!--
+Sourced from: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k#ethical-considerations-and-limitations
+-->
 Granite Code Instruct models are primarily fine-tuned using instruction-response pairs across a specific set of programming languages. Thus, their performance may be limited with out-of-domain programming languages. In this situation, it is beneficial providing few-shot examples to steer the model's output. Moreover, developers should perform safety testing and target-specific tuning before deploying these models on critical applications. The model also inherits ethical considerations and limitations from its base model. For more information, please refer to [Granite-8B-Code-Base-4K model card](https://huggingface.co/ibm-granite/granite-8b-code-base-4k).

@@ -1,6 +1,9 @@
 # Training Information
 
 ## Training Infrastructure
+<!--
+Sourced from: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct#hardware-and-software
+-->
 We used custom training libraries, Meta's custom built GPU cluster, and production infrastructure for pretraining. Fine-tuning, annotation, and evaluation were also performed on production infrastructure.
 
 Training utilized a cumulative of 39.3M GPU hours of computation on H100-80GB (TDP of 700W) type hardware, per the table below. Training time is the total GPU time required for training each model and power consumption is the peak power capacity per GPU device used, adjusted for power usage efficiency.
@@ -14,7 +17,9 @@ Training Greenhouse Gas Emissions Estimated total location-based greenhouse gas 
 The methodology used to determine training energy use and greenhouse gas emissions can be found [here](https://arxiv.org/pdf/2204.05149). Since Meta is openly releasing these models, the training energy use and greenhouse gas emissions will not be incurred by others.
 
 ## Training Data
-
+<!--
+Sourced from: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct#training-data
+-->
 ### Overview
 Llama 3.1 was pretrained on ~15 trillion tokens of data from publicly available sources. The fine-tuning data includes publicly available instruction datasets, as well as over 25M synthetically generated examples.
 
@@ -25,6 +30,10 @@ The pretraining data has a cutoff of December 2023.
 In this section, we report the results for Llama 3.1 models on standard automatic benchmarks. For all the evaluations, we use our internal evaluations library.
 
 #### Base Pretrained Models
+<!--
+Sourced from: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct#base-pretrained-models
+Note: For most sections you can easily copy the information, however, tables can be difficult to directly copy so you may need to enter the information yourself.
+-->
 | **Category** | **Benchmark** | **# Shots** | **Metric** | **Llama 3.1 8B** |
 |---                  |---      |---   |---      |--- |
 | **General** | MMLU | 5 | macro_avg/acc_char | 66.7 |
@@ -41,6 +50,10 @@ In this section, we report the results for Llama 3.1 models on standard automati
 || DROP (F1) | 3 | f1 | 59.5 |
 
 #### Instruction Tuned Models
+<!--
+Sourced from: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct#instruction-tuned-models
+Note: For most sections you can easily copy the information, however, tables can be difficult to directly copy so you may need to enter the information yourself.
+-->
 | **Category** | **Benchmark** | **# Shots** | **Metric** | **Llama 3.1 8B Instruct** |
 |---                  |---      |---   |---      |--- |
 | **General** | MMLU | 5 | macro_avg/acc_char | 69.4 |
@@ -62,6 +75,10 @@ In this section, we report the results for Llama 3.1 models on standard automati
 | **Multilingual** |Multilingual MGSM (CoT)|0|em|68.9|
 
 #### Multilingual Benchmarks
+<!--
+Sourced from: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct#multilingual-benchmarks
+Note: For most sections you can easily copy the information, however, tables can be difficult to directly copy so you may need to enter the information yourself.
+-->
 | **Category** | **Benchmark** | **Language** | **Llama 3.1 8B** |
 |---                  |---      |--- |--- |
 | **General** | **MMLU (5-shot, macro_avg/acc)** | Portuguese | 62.12 |

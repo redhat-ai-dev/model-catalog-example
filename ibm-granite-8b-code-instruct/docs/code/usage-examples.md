@@ -1,5 +1,7 @@
 # Usage Examples
-
+<!--
+Sourced from: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k#generation
+-->
 This is a simple example of how to use Granite-8B-Code-Instruct-4K model.
 
 ```python
