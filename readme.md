@@ -47,7 +47,7 @@ The following metadata is stored for each model in the catalog:
 
 ### Model Server Metadata
 
-The following metadata is stored for each model in the catalog: 
+The following metadata is stored for each model server in the catalog: 
 
 | Name                             | Type        | Description                                      | Catalog Implementation |
 | -------------------------------- | ----------- | -------------------------------------------------| ---------------------- |
