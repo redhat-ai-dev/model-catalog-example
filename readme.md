@@ -40,7 +40,7 @@ The following metadata is stored for each model in the catalog:
 | Usage        | String     | Brief description on the usage for the model. | `metadata.description` |
 | Type         | String     | The type of model being stored in the catalog. | Resource techdoc or tags |
 | License      | URL        | The license that the model uses. | Resource `metadata.links[]` or techdoc |
-| Tags         | String[]   | Descriptive labels for the model, to aid in filtering. | Resource `metadata.tags[]` |
+| Tags         | String[]   | Descriptive labels for the model to aid in filtering. | Resource `metadata.tags[]` |
 | Author       | String     | The author of the model. | Resource `metadata.tags[]` |
 | Maintainer   | String     | The maintainer of the model deployed on the model server. | Resource `spec.owner` |
 | Instructions | Techdoc    | Instructions on how to access / use the model. | Resource techdocs |
