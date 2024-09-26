@@ -17,6 +17,8 @@ In order to gain access to the model server you will need to sign in with your S
 ## API Schema
 <!--
 The name of the api, model-service-api, is grabbed from the name field in the ai-catalog.yaml metadata for the api.
+
+TechDocs read this as a URL starting from where the docs are located, so we can use ../ behaviour to navigate the TechDocs to reference other resources/components/apis
 -->
 The API Schema is available [here](../../../../../api/model-service-api/definition).
 
