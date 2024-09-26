@@ -1,11 +1,15 @@
 # Supported Models
 
-This Ollama model server is serving the following models on it:
+The following models are accessible via this model server API.
 
- - [granite-8b-code-instruct](https://huggingface.co/ibm-granite/granite-8b-code-instruct)
- - [meta-llama-3.1b-instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct)
+## IBM Granite-8B-Code-Instruct
 
-Techdocs links:
+[Hugging Face Repository](https://huggingface.co/ibm-granite/granite-8b-code-instruct)
 
- - [granite-8b-code-instruct](https://huggingface.co/ibm-granite/granite-8b-code-instruct)
- - [meta-llama-3.1b-instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct)
+[Model Documentation](../../../resource/ibm-granite-8b-code-instruct/docs)
+
+## Meta Llama-3.1-8B-Instruct
+
+[Hugging Face Repository](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct)
+
+[Model Documentation](../../../resource/meta-llama-31-8b-instruct/docs)
