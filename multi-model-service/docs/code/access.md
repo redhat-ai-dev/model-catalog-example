@@ -8,7 +8,7 @@ The model server can be accessed [here](https://model-service.apps.rosa.redhat-a
 
 ## Authentication
 
-In order to gain access to the model server you will need to sign in with your SSO credentials. Once you have signed in you are able to generate a token by navigating to **`Apps and API Keys`** on the top ribbon and hitting **`Create Application`**:
+In order to gain access to the model server you will need to sign in with your SSO credentials. Once you have signed in you are able to generate a token by navigating to **`Apps and API Keys`** on the top ribbon and hitting **`Create new Application`**:
 
 ![Generation Example](../images/generation-example.png)
 
@@ -18,7 +18,7 @@ In order to gain access to the model server you will need to sign in with your S
 <!--
 The name of the api, model-service-api, is grabbed from the name field in the ai-catalog.yaml metadata for the api.
 -->
-The API Schema is available [here](../../../api/model-service-api/definition).
+The API Schema is available [here](../../../../../api/model-service-api/definition).
 
 ## Usage Examples
 <!--
