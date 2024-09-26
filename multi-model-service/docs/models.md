@@ -6,10 +6,10 @@ The following models are accessible via this model server API.
 
 [Hugging Face Repository](https://huggingface.co/ibm-granite/granite-8b-code-instruct)
 
-[Model Documentation](../../../resource/ibm-granite-8b-code-instruct/docs)
+[Model Documentation](../../../../resource/ibm-granite-8b-code-instruct/docs)
 
 ## Meta Llama-3.1-8B-Instruct
 
 [Hugging Face Repository](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct)
 
-[Model Documentation](../../../resource/meta-llama-31-8b-instruct/docs)
+[Model Documentation](../../../../resource/meta-llama-31-8b-instruct/docs)

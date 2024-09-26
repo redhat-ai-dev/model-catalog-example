@@ -1,7 +1,10 @@
 site_name: 'Documentation'
 
 nav:
-  - Usage: index.md
+  - Table of Contents: index.md
+  - Supported Models: models.md
+  - Access & Usage Information: code/access.md
+  - Usage Disclaimer: usage.md
 
 plugins:
   - techdocs-core
