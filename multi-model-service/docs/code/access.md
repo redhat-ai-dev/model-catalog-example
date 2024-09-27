@@ -8,7 +8,7 @@ The model server can be accessed [here](https://model-service.apps.rosa.redhat-a
 
 ## Authentication
 
-In order to gain access to the model server you will need to sign in with your SSO credentials. Once you have signed in you are able to generate a token by navigating to **`Apps and API Keys`** on the top ribbon and hitting **`Create new Application`**:
+In order to gain access to the model server you will need to sign in with your SSO credentials by selecting Google auth. Once you have signed in you are able to generate a token by navigating to **`Apps and API Keys`** on the top ribbon and hitting **`Create new Application`**:
 
 ![Generation Example](../images/generation-example.png)
 
@@ -38,7 +38,7 @@ curl -X 'POST' \
     'https://ibm-granite-8b-code-instruct-3scale-apicast-production.<hostname>:<port>/v1/completions' \
     -H 'accept: application/json' \
     -H 'Content-Type: application/json' \
-    -H 'Authorization: Bearer ***************************' \
+    -H 'Authorization: Bearer <YOUR_API_KEY>' \
     -d '{
     "model": "ibm-granite-8b-code-instruct",
     "prompt": "San Francisco is a",
@@ -146,7 +146,7 @@ curl -X 'POST' \
   'https://nomic-embed-text-v1-5-maas-apicast-production.<hostname>:<port>/embed' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer *************************' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
   -d '{
   "inputs": "string",
   "normalize": true,
@@ -234,7 +234,7 @@ curl -X 'POST' \
     'https://meta-llama-31-8b-instruct-3scale-apicast-production.<hostname>:<port>/v1/completions' \
     -H 'accept: application/json' \
     -H 'Content-Type: application/json' \
-    -H 'Authorization: Bearer ***************************' \
+    -H 'Authorization: Bearer <YOUR_API_KEY>' \
     -d '{
     "model": "meta-llama-31-8b-instruct",
     "prompt": "San Francisco is a",
