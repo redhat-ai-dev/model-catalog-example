@@ -4,7 +4,7 @@
 
 ### Model Server URL
 
-The model server can be accessed [here](https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/).
+The model server can be accessed [here](https://model-service.<hostname>.com/).
 
 ## Authentication
 
