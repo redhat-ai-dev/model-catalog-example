@@ -1,0 +1,700 @@
+####################################
+# COMPONENTS
+# A Component represents a model server that's deployed, containing metadata about it
+####################################
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ollama-model-service
+  annotations:
+    backstage.io/techdocs-ref: dir:./
+  description: 'Ollama-based model service providing a variety of LLMs.'
+  links:
+    - url: http://ollama-route-ollama.apps.domain.com
+      title: Access
+      type: website
+      icon: WebAssett
+  tags:
+    - genai
+    - gemma2
+    - llama3
+    - mistral
+    - phi
+    - granite-code
+    - ollama
+    - llm
+    - ollama-model-service
+spec:
+  type: model-server
+  owner: user:johnmcollier
+  lifecycle: production
+  providesApis:
+    - model-service-api
+  dependsOn:
+    - resource:ibm-granite-8b-code-instruct
+    - resource:meta-llama-32-1b
+    - resource:meta-llama-31-8b
+    - resource:gemma2-2b
+    - resource:mistral-7b-instruct
+    - resource:phi-mini-instruct
+    - api:model-service-api
+  profile:
+    displayName: "Ollama Model Service"
+---
+####################################
+# RESOURCES
+# A resource (with type `ai-model`) represents an AI model that's deployed on an associated model server
+####################################
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: granite-20b-code-instruct
+  annotations:
+    backstage.io/techdocs-ref: dir:granite-20b-code-instruct
+  description: 'IBM Granite is a decoder-only code model for code generative tasks (e.g. fixing bugs, explaining code, documenting code. Trained with code written in 116 programming languages.'
+  links:
+    - url: http://ollama-route-ollama.apps.domain.com
+      title: API URL
+      type: website
+      icon: WebAsset
+    - url: https://huggingface.co/ibm-granite/granite-20b-code-instruct-8k
+      title: Huggingface
+      type: website
+      icon: WebAsset
+    - url: https://huggingface.co/ibm-granite/granite-20b-code-instruct-8k/tree/main
+      title: Download Model Artifacts
+      type: website
+      icon: WebAsset
+    - url: https://www.apache.org/licenses/LICENSE-2.0
+      title: Apache-2.0 License
+      type: website
+      icon: WebAsset
+  tags:
+    - genai
+    - ibm
+    - llm
+    - granite
+    - conversational
+    - task-text-generation
+    - 20B
+spec:
+  type: ai-model
+  owner: user:johnmcollier
+  lifecycle: production
+  providesApis:
+    - model-service-api
+  dependencyOf: 
+    - component:ollama-model-service
+  profile:
+    displayName: "IBM Granite Code Model 20B"
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: meta-llama-32-1b
+  annotations:
+    backstage.io/techdocs-ref: dir:meta-llama-32-1b
+  description: 'The Meta Llama 3.2 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction-tuned generative models.'
+  links:
+    - url: http://ollama-route-ollama.apps.domain.com
+      title: API URL
+      type: website
+      icon: WebAsset
+    - url: https://huggingface.co/meta-llama/Llama-3.2-1B
+      title: Huggingface
+      type: website
+      icon: WebAsset
+    - url: https://huggingface.co/meta-llama/Llama-3.2-1B/tree/main
+      title: Download Model Artifacts
+      type: website
+      icon: WebAsset
+    - url: https://huggingface.co/meta-llama/Llama-3.2-1B/blob/main/LICENSE.txt
+      title: Llama-3.2 License
+      type: website
+      icon: WebAsset
+  tags:
+    - genai
+    - meta
+    - llm
+    - llama
+    - conversational
+    - multilingual
+    - task-text-generation
+    - 1B
+spec:
+  type: ai-model
+  owner: user:johnmcollier
+  lifecycle: production
+  providesApis:
+    - model-service-api
+  dependencyOf: 
+    - component:ollama-model-service
+  profile:
+    displayName: "Meta Llama 3.2 1B"
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: gemma2-2b
+  annotations:
+    backstage.io/techdocs-ref: dir:gemma2-2b
+  description: 'Gemma is a family of lightweight, state-of-the-art open models from Google, built from the same research and technology used to create the Gemini models. They are text-to-text, decoder-only large language models, available in English, with open weights for both pre-trained variants and instruction-tuned variants. Gemma models are well-suited for a variety of text generation tasks, including question answering, summarization, and reasoning. Their relatively small size makes it possible to deploy them in environments with limited resources such as a laptop, desktop or your own cloud infrastructure, democratizing access to state of the art AI models and helping foster innovation for everyone.'
+  links:
+    - url: http://ollama-route-ollama.apps.domain.com
+      title: API URL
+      type: website
+      icon: WebAsset
+    - url: https://huggingface.co/google/gemma-2-2b
+      title: Huggingface
+      type: website
+      icon: WebAsset
+    - url: https://huggingface.co/google/gemma-2-2b/tree/main
+      title: Download Model Artifacts
+      type: website
+      icon: WebAsset
+    - url: https://ai.google.dev/gemma/terms
+      title: Gemma License
+      type: website
+      icon: WebAsset
+  tags:
+    - genai
+    - google
+    - llm
+    - gemma2
+    - text-to-text
+    - task-text-generation
+    - 2b
+spec:
+  type: ai-model
+  owner: user:johnmcollier
+  lifecycle: production
+  providesApis:
+    - model-service-api
+  dependencyOf: 
+    - component:ollama-model-service
+  profile:
+    displayName: "Google Gemma2 2B"
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: phi-mini-instruct
+  annotations:
+    backstage.io/techdocs-ref: dir:phi-mini-instruct
+  description: 'Phi-3.5-mini is a lightweight, state-of-the-art open model built upon datasets used for Phi-3 - synthetic data and filtered publicly available websites - with a focus on very high-quality, reasoning dense data. The model belongs to the Phi-3 model family and supports 128K token context length. The model underwent a rigorous enhancement process, incorporating both supervised fine-tuning, proximal policy optimization, and direct preference optimization to ensure precise instruction adherence and robust safety measures.'
+  links:
+    - url: http://ollama-route-ollama.apps.domain.com
+      title: API URL
+      type: website
+      icon: WebAsset
+    - url: https://huggingface.co/microsoft/Phi-3.5-mini-instruct
+      title: Huggingface
+      type: website
+      icon: WebAsset
+    - url: https://huggingface.co/microsoft/Phi-3.5-mini-instruct/tree/main
+      title: Download Model Artifacts
+      type: website
+      icon: WebAsset
+    - url: https://huggingface.co/microsoft/Phi-3.5-mini-instruct/resolve/main/LICENSE
+      title: MIT License
+      type: website
+      icon: WebAsset
+  tags:
+    - phi
+    - microsoft
+    - llm
+    - task-strong-reasoning
+    - task-text-generation
+spec:
+  type: ai-model
+  owner: user:johnmcollier
+  lifecycle: production
+  providesApis:
+    - model-service-api
+  dependencyOf: 
+    - component:ollama-model-service
+  profile:
+    displayName: "Microsoft Phi-3.5 Mini Instruct"
+######################################
+# APIs
+# The API object represent the API used by the model server (e.g. OpenAI)
+######################################
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: ollama-service-api
+  title: Ollama Service API
+  description: 'The OpenAI-compatible REST API exposed by the Ollama-based model service.'
+  tags:
+    - api
+    - openai
+    - ollama
+  links:
+    - url: https://github.com/ollama/ollama/blob/main/docs/api.md
+      title: Ollama API Documentation
+      type: website
+      icon: WebAsset
+spec:
+  type: openapi
+  owner: user:johnmcollier
+  lifecycle: production
+  dependencyOf: 
+    - component:ollama-model-service
+  definition: |
+    {
+      "openapi": "3.0.0",
+      "info": {
+        "title": "ollama API",
+        "description": "API for interacting with ollama models",
+        "version": "1.0.0"
+      },
+      "paths": {
+        "/api/generate": {
+          "post": {
+            "summary": "Generate a completion",
+            "description": "Generate a response for a given prompt with a provided model. This is a streaming endpoint.",
+            "requestBody": {
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "model": {
+                        "type": "string",
+                        "description": "The model name (required)"
+                      },
+                      "prompt": {
+                        "type": "string",
+                        "description": "The prompt to generate a response for"
+                      },
+                      "options": {
+                        "type": "object",
+                        "description": "Additional model parameters"
+                      },
+                      "system": {
+                        "type": "string",
+                        "description": "System prompt to override the model's definition"
+                      },
+                      "template": {
+                        "type": "string",
+                        "description": "The full prompt or prompt template to override the model's definition"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "200": {
+                "description": "A stream of JSON objects",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "model": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "response": {
+                          "type": "string"
+                        },
+                        "done": {
+                          "type": "boolean"
+                        },
+                        "total_duration": {
+                          "type": "integer"
+                        },
+                        "load_duration": {
+                          "type": "integer"
+                        },
+                        "sample_count": {
+                          "type": "integer"
+                        },
+                        "sample_duration": {
+                          "type": "integer"
+                        },
+                        "prompt_eval_count": {
+                          "type": "integer"
+                        },
+                        "prompt_eval_duration": {
+                          "type": "integer"
+                        },
+                        "eval_count": {
+                          "type": "integer"
+                        },
+                        "eval_duration": {
+                          "type": "integer"
+                        },
+                        "context": {
+                          "type": "array",
+                          "items": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "400": {
+                "description": "Bad Request"
+              }
+            }
+          }
+        },
+        "/api/create": {
+          "post": {
+            "summary": "Create a Model",
+            "description": "Create a model from a Modelfile",
+            "requestBody": {
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "Name of the model to create (required)"
+                      },
+                      "path": {
+                        "type": "string",
+                        "description": "Path to the Modelfile"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "200": {
+                "description": "A stream of JSON objects with status \"success\"",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/api/tags": {
+          "get": {
+            "summary": "List Local Models",
+            "description": "List models that are available locally",
+            "responses": {
+              "200": {
+                "description": "List of local models",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "models": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string"
+                              },
+                              "modified_at": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "size": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/api/show": {
+          "post": {
+            "summary": "Show Model Information",
+            "description": "Show details about a model including modelfile, template, parameters, license, and system prompt",
+            "requestBody": {
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "Name of the model to show"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "200": {
+                "description": "Model information",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "license": {
+                          "type": "string"
+                        },
+                        "modelfile": {
+                          "type": "string"
+                        },
+                        "parameters": {
+                          "type": "string"
+                        },
+                        "template": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/api/copy": {
+          "post": {
+            "summary": "Copy a Model",
+            "description": "Copy a model. Creates a model with another name from an existing model",
+            "requestBody": {
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "source": {
+                        "type": "string",
+                        "description": "The source model name (required)"
+                      },
+                      "destination": {
+                        "type": "string",
+                        "description": "The destination model name (required)"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "200": {
+                "description": "A stream of JSON objects with status \"success\"",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/api/delete": {
+          "delete": {
+            "summary": "Delete a Model",
+            "description": "Delete a model and its data",
+            "parameters": [
+              {
+                "name": "model",
+                "in": "query",
+                "description": "Name of the model to delete (required)",
+                "required": true,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "A stream of JSON objects with status \"success\"",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/api/pull": {
+          "post": {
+            "summary": "Pull a Model",
+            "description": "Download a model from the ollama library",
+            "requestBody": {
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "Name of the model to pull (required)"
+                      },
+                      "insecure": {
+                        "type": "boolean",
+                        "description": "Allow insecure connections to the library"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "200": {
+                "description": "Download status",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string"
+                        },
+                        "digest": {
+                          "type": "string"
+                        },
+                        "total": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/api/push": {
+          "post": {
+            "summary": "Push a Model",
+            "description": "Upload a model to a model library",
+            "requestBody": {
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "Name of the model to push (required)"
+                      },
+                      "insecure": {
+                        "type": "boolean",
+                        "description": "Allow insecure connections to the library"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "200": {
+                "description": "A stream of JSON objects with status \"success\"",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/api/embeddings": {
+          "post": {
+            "summary": "Generate Embeddings",
+            "description": "Generate embeddings from a model",
+            "requestBody": {
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "model": {
+                        "type": "string",
+                        "description": "The model name (required)"
+                      },
+                      "prompt": {
+                        "type": "string",
+                        "description": "Text to generate embeddings for"
+                      },
+                      "options": {
+                        "type": "object",
+                        "description": "Additional model parameters"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "200": {
+                "description": "Embeddings",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "embeddings": {
+                          "type": "array",
+                          "items": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }

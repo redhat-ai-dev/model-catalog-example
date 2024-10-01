@@ -6,25 +6,25 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: multi-model-service
+  name: developer-model-service
   annotations:
-    backstage.io/techdocs-ref: dir:multi-model-service
-  description: 'Ollama-based model service providing models for developer tools.'
+    backstage.io/techdocs-ref: dir:./
+  description: 'vllm and 3scale-based model service providing models for developer tools.'
   links:
-    - url: https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
-      title: Access
+    - url: https://model-service.apps.domain.com
+      title: Accessm
       type: website
       icon: WebAssett
-    - url: https://ollama.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
+    - url: https://ibm-granite-8b-code-instruct-vllm.apps.domain.com
       title: API URL
       type: website
       icon: WebAsset
   tags:
     - genai
     - ibm-granite
-    - ollama
+    - vllm
     - llm
-    - multi-model-service
+    - developer-model-service
 spec:
   type: model-server
   owner: user:johnmcollier
@@ -36,7 +36,7 @@ spec:
     - resource:meta-llama-31-8b-instruct
     - api:model-service-api
   profile:
-    displayName: "Multi Model Service"
+    displayName: "Developer Model Service"
 ---
 ####################################
 # RESOURCES
@@ -50,16 +50,16 @@ metadata:
     backstage.io/techdocs-ref: dir:ibm-granite-8b-code-instruct
   description: 'IBM Granite is a decoder-only code model for code generative tasks (e.g. fixing bugs, explaining code, documenting code. Trained with code written in 116 programming languages.'
   links:
-    - url: https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
+    - url: https://model-service.apps.domain.com
       title: Access
       type: website
       icon: WebAssett
-    - url: https://ollama.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
+    - url: https://ibm-granite-8b-code-instruct-vllm.apps.domain.com
       title: API URL
       type: website
       icon: WebAsset
     - url: https://huggingface.co/ibm-granite/granite-8b-code-instruct
-      title: Huggingface
+      title: Model Repository
       type: website
       icon: WebAsset
     - url: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k/tree/main
@@ -84,69 +84,22 @@ spec:
   providesApis:
     - model-service-api
   dependencyOf: 
-    - component:multi-model-service
+    - component:developer-model-service
   profile:
     displayName: "IBM Granite Code Model"
----
-apiVersion: backstage.io/v1alpha1
-kind: Resource
-metadata:
-  name: meta-llama-31-8b-instruct
-  annotations:
-    backstage.io/techdocs-ref: dir:meta-llama-31-8b-instruct
-  description: 'Llama 3.1 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety'
-  links:
-    - url: https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
-      title: Access
-      type: website
-      icon: WebAssett
-    - url: https://ollama.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/
-      title: API URL
-      type: website
-      icon: WebAsset
-    - url: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct
-      title: Huggingface
-      type: website
-      icon: WebAsset
-    - url: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct/tree/main
-      title: Download Model Artifacts
-      type: website
-      icon: WebAsset
-    - url: https://www.apache.org/licenses/LICENSE-2.0
-      title: Apache-2.0 License
-      type: website
-      icon: WebAsset
-  tags:
-    - genai
-    - meta
-    - llm
-spec:
-  type: ai-model
-  owner: user:johnmcollier
-  lifecycle: production
-  providesApis:
-    - model-service-api
-  dependencyOf: 
-    - component:multi-model-service
-  profile:
-    displayName: "Meta Llama-3.1 8b Model"
-######################################
-# APIs
-# The API object represent the API used by the model server (e.g. OpenAI)
-######################################
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: model-service-api
   title: Model Service API
-  description: 'The OpenAI-compatible REST API exposed by the Ollama-based multi model service.'
+  description: 'The OpenAI-compatible REST API exposed by the vllm-based developer model service.'
   tags:
     - api
     - openai
-    - ollama
+    - vllm
   links:
-    - url: https://model-service.apps.rosa.redhat-ai-dev.m6no.p3.openshiftapps.com/docs
+    - url: https://model-service.apps.domain.com/docs
       title: Model Service API Documentation
       type: website
       icon: WebAsset
@@ -157,4 +110,4 @@ spec:
   dependencyOf: 
     - component:ibm-granite-8b-code-instruct
   definition:
-    $text: https://github.com/redhat-ai-dev/model-catalog/blob/main/openapi.json
+    $text: https://github.com/redhat-ai-dev/model-catalog/blob/main/developer-model-service/openapi.json

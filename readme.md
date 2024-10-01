@@ -1,18 +1,22 @@
-# RHDH AI Catalog
+# RHDH Model Catalog
 
-Reference implementation of an AI catalog in RHDH
+Reference implementation of an AI model catalog in RHDH.
 
-## Import
+## Description
 
-To import into RHDH:
+This repository contains two examples, based on real model servers that have been deployed:
 
-1) Fork this repository
+1) [developer-model-service](./developer-model-service/):
 
-2) Modify ai-catalog.yaml as needed (change urls, change model(s), update techdocs, etc)
+   - A vllm-based single model service running IBM's granite-8b-code-instruct model, with 3scale acting as an API gateway
 
-3) Copy your URL for ai-catalog.yaml
+2) [ollama-model-service](./ollama-model-service/)
+ 
+   - An ollama-based multi model service running a variety of LLMs. 
 
-4) Import into RHDH as an existing Component
+Each example has Backstage `catalog-info.yaml` file provided with it, that represents the model server and model(s) as Backstage catalog types for import into RHDH.
+
+For more information on the structure of the model catalog, see below
 
 ## Catalog Structure
 
