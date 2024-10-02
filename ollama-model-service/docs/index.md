@@ -1,5 +1,5 @@
 # Table of Contents
 - [Supported Models](./models.md)
-- [Access & Usage Information](./code/access.md)
+- [Access & Usage Information](./access.md)
 - [Usage Disclaimer](./usage.md)
 

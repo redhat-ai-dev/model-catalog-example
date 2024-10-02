@@ -4,7 +4,7 @@
 
 ### Model Server URL
 
-The model server API can be accessed at: http://ollama-route-ollama.apps.domain.com/v1
+The model server API can be accessed at: https://ollama-route-ollama.apps.domain.com/v1
 
 ## Authentication
 
@@ -14,7 +14,7 @@ The model server does not require authentication to access, and can be accessed 
 
 ## API Schema
 <!--
-The name of the api, model-service-api, is grabbed from the name field in the ai-catalog.yaml metadata for the api.
+The name of the api, ollama-service-api, is grabbed from the name field in the ai-catalog.yaml metadata for the api.
 
 TechDocs read this as a URL starting from where the docs are located, so we can use ../ behaviour to navigate the TechDocs to reference other resources/components/apis
 -->
@@ -30,7 +30,7 @@ The API Schema is available [here](../../../../../api/ollama-service-api/definit
 
 ```
 curl -X 'POST' \
-    'http://ollama-route-ollama.apps.domain.com/v1/completions' \
+    'https://ollama-route-ollama.apps.domain.com/v1/completions' \
     -H 'accept: application/json' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -49,7 +49,7 @@ import urllib3
 import numpy as np
 import json
 
-API_URL = "http://ollama-route-ollama.apps.domain.com"
+API_URL = "https://ollama-route-ollama.apps.domain.com"
 API_KEY = "sk-no-key-required"
 
 input = ["San Francisco is a"]
@@ -75,7 +75,7 @@ print(completion)
 ```python
 from langchain_community.llms import VLLMOpenAI
 
-API_URL = "http://ollama-route-ollama.apps.domain.com/v1"
+API_URL = "https://ollama-route-ollama.apps.domain.com/v1"
 API_KEY = sk-no-key-required
 
 llm = VLLMOpenAI(
@@ -95,7 +95,7 @@ print(llm.invoke("Rome is"))
 
 ```bash
 curl -X 'POST' \
-    'http://ollama-route-ollama.apps.domain.com/v1/completions' \
+    'https://ollama-route-ollama.apps.domain.com/v1/completions' \
     -H 'accept: application/json' \
     -H 'Content-Type: application/json' \
     -d '{

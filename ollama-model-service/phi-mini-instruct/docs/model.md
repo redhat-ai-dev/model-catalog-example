@@ -14,7 +14,7 @@ Phi-3.5-mini has 3.8B parameters and is a dense decoder-only Transformer model u
 Microsoft
 
 ### Model Repository
-[huggingface.co/meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
+[huggingface.co/meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/microsoft/Phi-3.5-mini-instruct)
 
 ### Release Date
 August 2024

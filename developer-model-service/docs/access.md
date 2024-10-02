@@ -4,7 +4,7 @@
 
 ### Model Server URL
 
-The model server can be accessed [here](https://model-service.<hostname>.com/).
+The model server can be accessed [here](https://model-service.apps.domain.com/).
 
 ## Authentication
 
@@ -37,7 +37,7 @@ Sourced from: https://github.com/rh-aiservices-bu/models-aas/blob/main/deploymen
 
 ```
 curl -X 'POST' \
-    'https://ibm-granite-8b-code-instruct-3scale-apicast-production.<hostname>:<port>/v1/completions' \
+    'https://ibm-granite-8b-code-instruct-3scale-apicast-production.apps.domain.com/v1/completions' \
     -H 'accept: application/json' \
     -H 'Content-Type: application/json' \
     -H 'Authorization: Bearer <YOUR_API_KEY>' \
@@ -57,7 +57,7 @@ import urllib3
 import numpy as np
 import json
 
-API_URL = "https://ibm-granite-8b-code-instruct-3scale-apicast-production.<hostname>:<port>"
+API_URL = "https://ibm-granite-8b-code-instruct-3scale-apicast-production.apps.domain.com"
 API_KEY = "***************************"
 
 input = ["San Francisco is a"]
@@ -83,7 +83,7 @@ print(completion)
 ```python
 from langchain_community.llms import VLLMOpenAI
 
-API_URL = "https://ibm-granite-8b-code-instruct-3scale-apicast-production.<hostname>:<port>"
+API_URL = "https://ibm-granite-8b-code-instruct-3scale-apicast-production.apps.domain.com"
 API_KEY = "***************************"
 
 llm = VLLMOpenAI(
@@ -105,7 +105,7 @@ print(llm.invoke("Rome is"))
       "title": "Granite-8B-Instruct",
       "provider": "openai",
       "model": "ibm-granite-8b-code-instruct",
-      "apiBase": "https://ibm-granite-8b-code-instruct-3scale-apicast-production.<hostname>:<port>/v1/",
+      "apiBase": "https://ibm-granite-8b-code-instruct-3scale-apicast-production.apps.domain.com/v1/",
       "apiKey": "************************",
       "completionOptions": {
       "temperature": 0.1,
@@ -120,7 +120,7 @@ print(llm.invoke("Rome is"))
     "title": "Granite-8B-Instruct",
     "provider": "openai",
     "model": "ibm-granite-8b-code-instruct",
-    "apiBase": "https://ibm-granite-8b-code-instruct-3scale-apicast-production.<hostname>:<port>/v1/",
+    "apiBase": "https://ibm-granite-8b-code-instruct-3scale-apicast-production.apps.domain.com/v1/",
     "apiKey": "****************************",
     "completionOptions": {
       "temperature": 0.1,

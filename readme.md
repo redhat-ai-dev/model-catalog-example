@@ -14,7 +14,7 @@ This repository contains two examples, based on real model servers that have bee
  
    - An ollama-based multi model service running a variety of LLMs. 
 
-Each example has Backstage `catalog-info.yaml` file provided with it, that represents the model server and model(s) as Backstage catalog types for import into RHDH.
+Each example has Backstage `catalog-info.yaml` file provided with it, that represents the model server and model(s) as Backstage catalog types for import into RHDH. Each catalog has corresponding techdocs with it, that provide documentation for the model server and model(s). 
 
 For more information on the structure of the model catalog, see below
 
