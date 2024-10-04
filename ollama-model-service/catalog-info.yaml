@@ -10,10 +10,14 @@ metadata:
     backstage.io/techdocs-ref: dir:./
   description: 'Ollama-based model service providing a variety of LLMs.'
   links:
-    - url: https://ollama-route-ollama.apps.domain.com
+    - url: https://model-service.apps.domain.com
       title: Access
       type: website
       icon: WebAssett
+    - url: https://ollama-model-service-apicast-production.apps.domain.com
+      title: API URL
+      type: website
+      icon: WebAsset
   tags:
     - genai
     - gemma2

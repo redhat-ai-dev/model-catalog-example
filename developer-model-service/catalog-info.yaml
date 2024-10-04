@@ -9,7 +9,7 @@ metadata:
   name: developer-model-service
   annotations:
     backstage.io/techdocs-ref: dir:./
-  description: 'vllm and 3scale-based model service providing models for developer tools.'
+  description: 'vLLM and 3scale-based model service providing models for developer tools.'
   links:
     - url: https://model-service.apps.domain.com
       title: Access
@@ -94,7 +94,7 @@ kind: API
 metadata:
   name: model-service-api
   title: Model Service API
-  description: 'The OpenAI-compatible REST API exposed by the vllm-based developer model service.'
+  description: 'The OpenAI-compatible REST API exposed by the vLLM-based developer model service.'
   tags:
     - api
     - openai

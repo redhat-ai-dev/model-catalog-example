@@ -10,7 +10,7 @@ The model server can be accessed [here](https://model-service.apps.domain.com/).
 
 In order to gain access to the model server you will need to sign in with your SSO credentials by selecting Google auth. Once you have signed in you are able to generate a token by navigating to **`Apps and API Keys`** on the top ribbon and hitting **`Create new Application`**:
 
-![Generation Example](../images/generation-example.png)
+![Generation Example](./images/generation-example.png)
 
 Once a token has been generated, you will be provided with the API server URL.
 
@@ -18,11 +18,11 @@ Once a token has been generated, you will be provided with the API server URL.
 
 ## API Schema
 <!--
-The name of the api, model-service-api, is grabbed from the name field in the ai-catalog.yaml metadata for the api.
+The name of the api, model-service-api, is grabbed from the name field in the catalog-info.yaml metadata for the api.
 
-TechDocs read this as a URL starting from where the docs are located, so we can use ../ behaviour to navigate the TechDocs to reference other resources/components/apis
+We can use absolute paths to navigate the TechDocs to reference other resources/components/apis
 -->
-The API Schema is available [here](../../../../../api/model-service-api/definition).
+The API Schema is available [here](/catalog/default/api/model-service-api/definition).
 
 ## Usage Examples
 <!--

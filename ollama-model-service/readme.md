@@ -13,7 +13,7 @@ The models deployed in the example are:
 - phi3.5:3.8b
 - granite-code:20b
 
-However, if you wish to deploy different or less models, simply remove the corresponding `Resources` from the [ai-catalog.yaml](./ai-catalog.yaml). 
+However, if you wish to deploy different or less models, simply remove the corresponding `Resources` from the [catalog-info.yaml](./catalog-info.yaml). 
 
 ## Import into RHDH
 
@@ -23,6 +23,6 @@ If you wish to replicate this example:
 
 2) Follow the instructions above to deploy the model server and models.
 
-3) Modify the `ai-catalog.yaml` as needed: replace any links (e.g. any `domain.com` references), and update any `Resources` as needed (for example, adding/removing models).
+3) Modify the `catalog-info.yaml` as needed: replace any links (e.g. any `domain.com` references), and update any `Resources` as needed (for example, adding/removing models).
 
 4) Select `Register Existing Component` in Backstage, and copy the catalog link into import form.

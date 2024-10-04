@@ -18,6 +18,6 @@ If you wish to replicate this example:
 
 2) Follow the instructions above to deploy the model server and models.
 
-3) Modify the `ai-catalog.yaml` as needed: replace any links (e.g. any `domain.com` references), and update any `Resources` as needed (for example, adding/removing models).
+3) Modify the `catalog-info.yaml` as needed: replace any links (e.g. any `domain.com` references), and update any `Resources` as needed (for example, adding/removing models).
 
 4) Select `Register Existing Component` in Backstage, and copy the catalog link into import form.

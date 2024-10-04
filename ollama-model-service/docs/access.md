@@ -14,11 +14,11 @@ The model server does not require authentication to access, and can be accessed 
 
 ## API Schema
 <!--
-The name of the api, ollama-service-api, is grabbed from the name field in the ai-catalog.yaml metadata for the api.
+The name of the api, ollama-service-api, is grabbed from the name field in the catalog-info.yaml metadata for the api.
 
-TechDocs read this as a URL starting from where the docs are located, so we can use ../ behaviour to navigate the TechDocs to reference other resources/components/apis
+We can use absolute paths to navigate the TechDocs to reference other resources/components/apis
 -->
-The API Schema is available [here](../../../../../api/ollama-service-api/definition).
+The API Schema is available [here](/catalog/default/api/ollama-service-api/definition).
 
 ## Usage Examples
 
