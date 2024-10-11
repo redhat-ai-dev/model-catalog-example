@@ -17,9 +17,9 @@ Once a token has been generated, you will be provided with the API server URL.
 ## **API Schema**
 <!--
 The name of the api, model-service-api, is grabbed from the name field in the catalog-info.yaml metadata for the api.
-
 We can use absolute paths to navigate the TechDocs to reference other resources/components/apis
 -->
+
 The API Schema is available [here](/catalog/default/api/model-service-api/definition).
 
 ## **Usage Examples**
