@@ -37,7 +37,7 @@ This section should contain the intended use of the model. Most suppliers of the
 
 ### Model Usage - code/usage-examples.md
 
-This document should aim to provide users with the information required to consume the model. For example if the model has a Python package that can be imported then it would be important to provide examples of different actions you can perform.
+This document should aim to provide users with the information required to consume the model. For example, if the model has a Python package that can be imported then it would be important to provide examples of different actions you can perform.
 
 You are able to format Markdown to properly highlight code based on language by adding the language next to your 3 back-ticks.
 
@@ -77,7 +77,7 @@ This section contains the license the model falls under as part of a Markdown fi
 
 ### Directory Format & Best Practices
 
-When looking to add Tech Docs to your resource there are a few practices you should adhere to, this will help ensure that everything is rendered correctly:
+When looking to add Tech Docs to your resource there are a few practices you should adhere to; this will help ensure that everything is rendered correctly:
 
 - All documentation should be under `/docs` with image assets such as PNGs being stored under `/docs/images` and Markdown files containing code samples under `/docs/code`
 
@@ -87,7 +87,17 @@ When looking to add Tech Docs to your resource there are a few practices you sho
 
 - All Markdown files should be referenced within mkdocs.yaml, for file path you should reference the .md files as if mkdocs.yaml is the root:
 
-![Example Structure Img](../assets/mkdocs-structure-example.png)
+```yaml
+site_name: 'Documentation'
+
+nav:
+  - Table of Contents: index.md
+  - Model Information: model.md
+  - Model Usage: code/usage-examples.md
+  - Training Information: training.md
+  - Ethics: ethics.md
+  - License: license.md
+```
 
 ### Adding Docs To The Catalog
 
