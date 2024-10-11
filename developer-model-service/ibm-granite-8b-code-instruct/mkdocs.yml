@@ -1,7 +1,7 @@
 site_name: 'Documentation'
 
 nav:
-  - Model Information: model.md
+  - Model Information: index.md
   - Model Usage: code/usage-examples.md
   - Training Information: training.md
   - Ethics: ethics.md
