@@ -1,32 +1,32 @@
 <!--
 Sourced from: https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md
 -->
-# Meta Llama 3.2 1B Instruct
+# **Meta Llama 3.2 1B Instruct**
 
-## Model Description
+## **Model Description**
 
 The Llama 3.2 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction-tuned generative models in 1B and 3B sizes (text in/text out). The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks. They outperform many of the available open source and closed chat models on common industry benchmarks.
 
-## Model Architecture
+## **Model Architecture**
 
 Llama 3.2 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety.
 
-### Developed By
+### **Developed By**
 Meta
 
-### HuggingFace Repository
+### **HuggingFace Repository**
 [huggingface.co/meta-llama/Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct)
 
-### Release Date
+### **Release Date**
 Sept 25, 2024
 
-### Licensing
+### **Licensing**
 Use of Llama 3.2 is governed by the [Llama 3.2 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/LICENSE) (a custom, commercial license agreement).
 
-### Feedback: 
+### **Feedback** 
 Instructions on how to provide feedback or comments on the model can be found in the Llama Models [README](https://github.com/meta-llama/llama-models/blob/main/README.md). For more technical information about generation parameters and recipes for how to use Llama 3.2 in applications, please go [here](https://github.com/meta-llama/llama-recipes).
 
-## Intended Use
+## **Intended Use**
 <!--
 Sourced from: https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md#intended-use
 -->

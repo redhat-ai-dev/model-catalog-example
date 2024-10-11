@@ -1,7 +1,6 @@
 site_name: 'Documentation'
 
 nav:
-  - Table Of Contents: index.md
   - Model Information: model.md
   - Training Information: training.md
   - License: license.md

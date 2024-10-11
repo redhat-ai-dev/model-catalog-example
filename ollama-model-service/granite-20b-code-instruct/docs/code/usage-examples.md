@@ -1,4 +1,4 @@
-# Usage Examples
+# **Usage Examples**
 <!--
 Sourced from: https://huggingface.co/ibm-granite/granite-20b-code-instruct-8k#generation
 -->
