@@ -1,12 +1,10 @@
-# Access & Usage Information
+# **Access & Usage Information**
 
-## Basic Information
-
-### Model Server URL
+##  **Model Server URL**
 
 The model server can be accessed [here](https://model-service.apps.domain.com/).
 
-## Authentication
+## **Authentication**
 
 In order to gain access to the model server you will need to sign in with your SSO credentials by selecting Google auth. Once you have signed in you are able to generate a token by navigating to **`Apps and API Keys`** on the top ribbon and hitting **`Create new Application`**:
 
@@ -16,7 +14,7 @@ Once a token has been generated, you will be provided with the API server URL.
 
 **Note:** If you are unable to access the model server via SSO you need to reach out to a platform administrator.
 
-## API Schema
+## **API Schema**
 <!--
 The name of the api, model-service-api, is grabbed from the name field in the catalog-info.yaml metadata for the api.
 
@@ -24,16 +22,14 @@ We can use absolute paths to navigate the TechDocs to reference other resources/
 -->
 The API Schema is available [here](/catalog/default/api/model-service-api/definition).
 
-## Usage Examples
+## **Usage Examples**
 <!--
 Sourced from: https://github.com/rh-aiservices-bu/models-aas/blob/main/deployment/3scale/portal/Examples.html.liquid
 -->
 
-### IBM Granite-8B-Code-Instruct
+### **IBM Granite-8B-Code-Instruct**
 
-#### Text Generation
-
-##### Using Curl
+##### **Using Curl**
 
 ```
 curl -X 'POST' \
@@ -49,7 +45,7 @@ curl -X 'POST' \
 }'
 ```
 
-##### Python
+##### **Python**
 
 ```python
 import requests
@@ -76,7 +72,7 @@ completion = requests.post(
 print(completion)
 ```
 
-##### Python With Langchain
+##### **Python With Langchain**
 
 **Note:** Requires `pip install langchain-community`
 
@@ -96,7 +92,7 @@ print(llm.invoke("Rome is"))
 ```
 
 
-##### Connecting Continue.dev to Granite-Code-Instruct
+##### **Connecting Continue.dev to Granite-Code-Instruct**
 
 ```
 ...

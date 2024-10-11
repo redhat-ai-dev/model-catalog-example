@@ -1,7 +1,6 @@
 site_name: 'Documentation'
 
 nav:
-  - Table of Contents: index.md
   - Supported Models: models.md
   - Access & Usage Information: access.md
   - Usage Disclaimer: usage.md
