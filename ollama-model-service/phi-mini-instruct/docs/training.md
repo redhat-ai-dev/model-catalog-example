@@ -1,6 +1,6 @@
-# Training Information
+# **Training Information**
 
-## Training Datasets
+## **Training Datasets**
 <!--
 Sourced from: https://huggingface.co/microsoft/Phi-3.5-mini-instruct#training-datasets
 -->

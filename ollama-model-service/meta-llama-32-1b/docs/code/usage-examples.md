@@ -1,16 +1,16 @@
-# Usage Examples
+# **Usage Examples**
 <!--
 Sourced from: https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct#how-to-use
 -->
 
-## Use with transformers
+## **Use with transformers**
 
 Starting with transformers >= 4.43.0 onward, you can run conversational inference using the Transformers pipeline abstraction or by leveraging the Auto classes with the generate() function.
 
 Make sure to update your transformers installation via pip install --upgrade transformers.
 
-
-```import transformers
+```python
+import transformers
 import torch
 
 model_id = "meta-llama/Meta-Llama-3.2-1B-Instruct"
@@ -34,13 +34,14 @@ outputs = pipeline(
 print(outputs[0]["generated_text"][-1])
 ```
 
-## Tool use with transformers 
+## **Tool use with transformers**
 
 LLaMA-3.1 supports multiple tool use formats. You can see a full guide to prompt formatting [here](https://llama.meta.com/docs/model-cards-and-prompt-formats/llama3_1/).
 
 Tool use is also supported through [chat templates](https://huggingface.co/docs/transformers/main/chat_templating#advanced-tool-use--function-calling) in Transformers. Here is a quick example showing a single simple tool:
 
-```import transformers
+```python
+import transformers
 import torch
 
 model_id = "meta-llama/Meta-Llama-3.2-1B-Instruct"

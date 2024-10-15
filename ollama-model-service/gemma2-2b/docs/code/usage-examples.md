@@ -1,16 +1,17 @@
-# Usage Examples
+# **Usage Examples**
 <!--
 Sourced from: https://huggingface.co/google/gemma-2-2b#usage
 -->
 
-## Running with the `pipeline` API
+## **Running with the `pipeline` API**
 
 Starting with transformers >= 4.43.0 onward, you can run conversational inference using the Transformers pipeline abstraction or by leveraging the Auto classes with the generate() function.
 
 Make sure to update your transformers installation via pip install --upgrade transformers.
 This is a simple example of how to use Granite-8B-Code-Instruct-4K model.
 
-```import torch
+```python
+import torch
 from transformers import pipeline
 
 pipe = pipeline(
@@ -25,10 +26,11 @@ response = outputs[0]["generated_text"]
 print(response)
 ```
 
-##  Running the model on a single / multi GPU  
+## **Running the model on a single / multi GPU**
 
 
-```# pip install accelerate
+```python
+# pip install accelerate
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 

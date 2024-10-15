@@ -1,12 +1,12 @@
-# Training Information
+# **Training Information**
 
-## Training Infrastructure
+## **Training Infrastructure**
 <!--
 Sourced from: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k#infrastructure
 -->
 Granite Code models were trained using two of IBM's super computing clusters, Vela and Blue Vela. Both were outfitted with NVIDIA A100 and H100 GPUs, respectively. These clusters provide a scalable and efficient infrastructure for training the models over thousands of GPUs.
 
-## Training Data
+## **Training Data**
 <!--
 Sourced from: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k#training-data
 -->

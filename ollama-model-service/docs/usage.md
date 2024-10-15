@@ -1,4 +1,4 @@
-# Usage Disclaimer 
+# **Usage Disclaimer**
 <!--
 This is a small snippet I made up off the top of my head. It may be best to fill this section out with disclaimers/warnings from the models the server supports and/or if your company has
 a legal team they may want to place something here too?

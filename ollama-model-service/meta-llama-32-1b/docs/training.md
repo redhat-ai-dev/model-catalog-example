@@ -1,6 +1,6 @@
-# Training Information
+# **Training Information**
 
-## Training Data
+## **Training Data**
 <!--
 Sourced from: https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct#training-data
 -->

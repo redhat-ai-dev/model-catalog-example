@@ -4,18 +4,13 @@ This guide can be used as a reference point when trying to add/customize your ow
 
 ## Template
 
-- [index.md](#table-of-contents---indexmd)
-- [model.md](#model-information---modelmd)
+- [index.md](#model-information---indexmd)
 - [code/usage-examples.md](#model-usage---codeusage-examplesmd)
 - [training.md](#training-information---trainingmd)
 - [ethics.md](#ethical-considerations---ethicsmd)
 - [license.md](#license---licensemd)
 
-### Table of Contents - index.md
-
-Red Hat Developer Hub provides a Table of Contents on the left-hand side of the Tech Docs page, however, when you first open Tech Docs it may be helpful to display that information right in the face of the user. This ensures that the index.md file for all models is consistent in what shows to the user.
-
-### Model Information - model.md
+### Model Information - index.md
 
 #### Model Description
 
@@ -91,8 +86,7 @@ When looking to add Tech Docs to your resource there are a few practices you sho
 site_name: 'Documentation'
 
 nav:
-  - Table of Contents: index.md
-  - Model Information: model.md
+  - Model Information: index.md
   - Model Usage: code/usage-examples.md
   - Training Information: training.md
   - Ethics: ethics.md
@@ -121,10 +115,8 @@ You are able to view the differing templates/structures in action as part of [de
 
 ### Screenshots
 
-![Example 1](../assets/model-example-1.png)
-
 ![Example 1](../assets/model-example-2.png)
 
-![Example 1](../assets/model-example-3.png)
+![Example 2](../assets/model-example-3.png)
 
-![Example 1](../assets/model-example-4.png)
+![Example 3](../assets/model-example-4.png)

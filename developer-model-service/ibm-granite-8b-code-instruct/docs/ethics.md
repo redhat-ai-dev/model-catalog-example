@@ -1,4 +1,4 @@
-# Ethical Considerations
+# **Ethical Considerations**
 <!--
 Sourced from: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k#ethical-considerations-and-limitations
 -->

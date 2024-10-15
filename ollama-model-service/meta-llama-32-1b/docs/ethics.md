@@ -1,4 +1,4 @@
-# Ethical Considerations
+# **Ethical Considerations**
 <!--
 Sourced from: https://huggingface.co/meta-llama/Llama-3.2-1B#ethical-considerations-and-limitations
 -->
