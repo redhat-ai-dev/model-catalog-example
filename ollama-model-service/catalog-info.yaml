@@ -30,7 +30,7 @@ metadata:
     - ollama-model-service
 spec:
   type: model-server
-  owner: user:johnmcollier
+  owner: user:jcollier
   lifecycle: production
   providesApis:
     - ollama-service-api
@@ -81,7 +81,7 @@ metadata:
     - 20b
 spec:
   type: ai-model
-  owner: user:johnmcollier
+  owner: user:jcollier
   lifecycle: production
   providesApis:
     - ollama-service-api
@@ -125,7 +125,7 @@ metadata:
     - 1b
 spec:
   type: ai-model
-  owner: user:johnmcollier
+  owner: user:jcollier
   lifecycle: production
   providesApis:
     - ollama-service-api
@@ -168,7 +168,7 @@ metadata:
     - 2b
 spec:
   type: ai-model
-  owner: user:johnmcollier
+  owner: user:jcollier
   lifecycle: production
   providesApis:
     - ollama-service-api
@@ -209,7 +209,7 @@ metadata:
     - task-text-generation
 spec:
   type: ai-model
-  owner: user:johnmcollier
+  owner: user:jcollier
   lifecycle: production
   providesApis:
     - ollama-service-api
@@ -239,7 +239,7 @@ metadata:
       icon: WebAsset
 spec:
   type: openapi
-  owner: user:johnmcollier
+  owner: user:jcollier
   lifecycle: production
   dependencyOf: 
     - component:ollama-model-service

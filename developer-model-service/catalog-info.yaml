@@ -29,7 +29,7 @@ metadata:
     - gateway
 spec:
   type: model-server
-  owner: user:johnmcollier
+  owner: user:jcollier
   lifecycle: production
   providesApis:
     - model-service-api
@@ -80,7 +80,7 @@ metadata:
     - task-text-generation
 spec:
   type: ai-model
-  owner: user:johnmcollier
+  owner: user:jcollier
   lifecycle: production
   providesApis:
     - model-service-api
@@ -106,7 +106,7 @@ metadata:
       icon: WebAsset
 spec:
   type: openapi
-  owner: user:johnmcollier
+  owner: user:jcollier
   lifecycle: production
   dependencyOf: 
     - component:ibm-granite-8b-code-instruct
