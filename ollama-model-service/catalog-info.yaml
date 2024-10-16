@@ -8,7 +8,7 @@ metadata:
   name: ollama-model-service
   annotations:
     backstage.io/techdocs-ref: dir:./
-  description: 'Ollama-based model service providing a variety of LLMs.'
+  description: 'Ollama-based model service running Red Hat OpenShift providing a variety of LLMs. The models are available over a simple OpenShift route, providing an easy way to quickly test out new models.'
   links:
     - url: https://model-service.apps.domain.com
       title: Access

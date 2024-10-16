@@ -9,7 +9,7 @@ metadata:
   name: developer-model-service
   annotations:
     backstage.io/techdocs-ref: dir:./
-  description: 'vLLM and 3scale-based model service providing models for developer tools.'
+  description: 'A vLLM and 3scale-based model service providing models for developer tools. A single model (IBM Granite Code 8b) is deployed on it through Red Hat OpenShift AI, and accessed over a secured API.'
   links:
     - url: https://model-service.apps.domain.com
       title: Access
