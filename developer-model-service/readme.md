@@ -2,7 +2,7 @@
 
 This model service example is based on the "Models-as-a-Service" reference implementation found here: https://github.com/rh-aiservices-bu/models-aas.
 
-To stand up your own instance, follow the instructions in the repository's readme, and select [granite-8b-code-instruct-4k](https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k) as the deployed model.
+To stand up your own instance, follow the instructions in the reference implementation's repository, and select [granite-8b-code-instruct-4k](https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k) as the deployed model.
 
 ## Models
 
