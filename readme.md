@@ -62,3 +62,7 @@ The following metadata is stored for each model server in the catalog:
 | Access Link                         | URL         | A link to access the model if hosted online. | Component [metadata.links[]](https://github.com/redhat-ai-dev/model-catalog-example/blob/d487d3f08ca193d2f286c3dab6704dc5ff3ec2b7/developer-model-service/catalog-info.yaml#L14-L17) |
 | API Schema              | String          | The API schema for the model server. | API [spec.definition](https://github.com/redhat-ai-dev/model-catalog-example/blob/d487d3f08ca193d2f286c3dab6704dc5ff3ec2b7/developer-model-service/catalog-info.yaml#L113-L2036) |
 | Access Instructions     | Techdoc        | How to get access to and how to use the model server. | Component [techdoc](https://github.com/redhat-ai-dev/model-catalog-example/blob/d487d3f08ca193d2f286c3dab6704dc5ff3ec2b7/developer-model-service/docs/access.md) |
+
+## Tutorials
+
+You can find helpful information related to creating a model server and/or creating models in our tutorials found in [/tutorials](./tutorials/). Contained within that directory is information for [models](./tutorials/model-guide.md) as well as [model servers](./tutorials/model-server-guide.md). 
